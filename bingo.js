@@ -20,11 +20,15 @@ function draw()
 	var numOfButs = 25; // counting the free space
 	var randHits = new Array(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25);
 	var randHits = shuffle(randHits);
+
+console.log("num of hits: "+hits.length);
+
 	for (var i=0; i<numOfButs; i++)
 		{
 		if (i != 12) // free space
 			document.getElementById(buts[i]).value = hits[randHits[i]];
 		}
+	document.getElementById("free").src = notBingo;
 	document.getElementById("before").style.display = "none";
 	document.getElementById("during").style.display = "";
 	}
