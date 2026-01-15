@@ -1,5 +1,5 @@
 //======================================================================
-var hits = new Array
+var hitsChristmas = new Array
 	(
 		"early guest",
 		"food on the floor",
@@ -33,8 +33,10 @@ var hits = new Array
 		"unmarked gift"
 	);
 //----------------------------------------------------------------------
-notBingo = "bingox.png";
-hasBingo = "bingo.png";
+var hitsAnniversary = hitsChristmas; 
+var hitsBirthday = hitsChristmas; 
+var hitsHalloween = hitsChristmas; 
+var hitsThanksgiving = hitsChristmas; 
 //======================================================================
 function chooseEvent(select) {
 	if(select.options[select.selectedIndex].value == "none") {
@@ -44,8 +46,37 @@ function chooseEvent(select) {
 
 console.log("selected:"+select.options[select.selectedIndex].value);
 
-		document.getElementById("before").style.display = "none";
-		document.getElementById("during").style.display = "";
+		switch (select.options[select.selectedIndex].value) {
+			case "Anniversary":
+				hits = hitsAnniversary;
+				notBingo = "bingox.png";
+				hasBingo = "bingo.png";
+				break;
+			case "Birthday":
+				hits = hitsBirthday;
+				notBingo = "bingox.png";
+				hasBingo = "bingo.png";
+				break;
+			case "Christmas":
+				hits = hitsChristmas;
+				notBingo = "bingox.png";
+				hasBingo = "bingo.png";
+				break;
+			case "Halloween":
+				hits = hitsHalloween;
+				notBingo = "bingox.png";
+				hasBingo = "bingo.png";
+				break;
+			case "Thanksgiving":
+				hits = hitsThanksgiving;
+				notBingo = "bingox.png";
+				hasBingo = "bingo.png";
+				break;
+			default:
+				// this is not reachable?
+				alert("Select an event from the list.");
+			}
+		draw();
 		}
 	}
 //======================================================================
