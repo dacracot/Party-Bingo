@@ -21,22 +21,7 @@ body {
 	height: 108px;
 	width: 108px;
 }
-.ButtonOnGreen
-{
-	-webkit-appearance: none;
-	border-radius: 2;
-	background-color: #10FF14; /*without this, safari ignores styling*/
-	font-family: Arial, Helvetica;
-	font-size: 12pt;
-	text-align: center;
-	white-space: normal;
-	padding: 2px;
-	border-style: outset;
-	cursor: pointer;
-	height: 108px;
-	width: 108px;
-}
-.ButtonOnRed
+.ButtonOn
 {
 	-webkit-appearance: none;
 	border-radius: 2;

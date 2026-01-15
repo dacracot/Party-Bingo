@@ -1,5 +1,4 @@
 //======================================================================
-var RedOrGreen = 0;
 var buts = new Array("b1","b2","b3","b4","b5","i1","i2","i3","i4","i5","n1","n2","n3","n4","n5","g1","g2","g3","g4","g5","o1","o2","o3","o4","o5");
 var card = [[false,false,false,false,false],[false,false,false,false,false],[false,false,true,false,false],[false,false,false,false,false],[false,false,false,false,false]];
 //======================================================================
@@ -13,39 +12,6 @@ function init()
 	{
 	var numOfButs = 25; // counting the free space
 	var randHits = new Array(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25);
-	var hits = new Array
-		(
-			"early guest",
-			"food on the floor",
-			"insulted guest",
-			"bad tasting food",
-			"dog fed scraps",
-			"awkward grace",
-			"cat fighting",
-			"audible burp",
-			"cat steals food",
-			"seating arrangement issues",
-			"football on TV",
-			"tablecloth stained",
-			"phone rings during dinner",
-			"dirty silverware",
-			"late guest",
-			"someone is on a diet",
-			"awkward silence",
-			"intoxicated guest",
-			"visible dog poop",
-			"someone leaves table",
-			"audible flatulence",
-			"laughter",
-			"burnt food",
-			"foreign language spoken",
-			"racial slur spoken",
-			"regifted present",
-			"xmas light malfunction",
-			"wrong holiday wrapping paper",
-			"preserve paper unwrapping",
-			"unmarked gift"
-		);
 	var randHits = shuffle(randHits);
 	for (var i=0; i<numOfButs; i++)
 		{
@@ -60,7 +26,7 @@ function toggle(b)
 	var ndx = buts.indexOf(b);
 	var row = Math.floor(ndx/5);
 	var col = ndx%5;
-	if ((c.className == "ButtonOnRed") || (c.className == "ButtonOnGreen"))
+	if ((c.className == "ButtonOn"))
 		{
 		card[row][col] = false;
 		c.className = "ButtonOff";
@@ -68,10 +34,7 @@ function toggle(b)
 	else if (c.className == "ButtonOff")
 		{
 		card[row][col] = true;
-		if (((++RedOrGreen) % 2) == 0)
-			c.className = "ButtonOnRed";
-		else
-			c.className = "ButtonOnGreen";
+		c.className = "ButtonOn";
 		}
 	isBingo();
 	}
@@ -106,13 +69,13 @@ function isBingo()
 	else if (card[0][4] && card[1][3] && card[2][2] && card[3][1] && card[4][0])
 		bingo();
 	else
-		document.getElementById("free").src = "bingox.png";
+		document.getElementById("free").src = notBingo;
 	}
 //======================================================================
 function bingo()
 	{
 	var s = new Audio("bingo.m4a");
 	s.play();
-	document.getElementById("free").src = "bingo.png";
+	document.getElementById("free").src = hasBingo;
 	}
 //======================================================================
