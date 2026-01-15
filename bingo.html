@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html manifest="bingo.appcache" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<title>BINGO</title>
@@ -7,10 +7,16 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="white" />
 	<link rel="apple-touch-icon" href="bingo.png"/>
 	<link rel="stylesheet" href="bingo.css" type="text/css" media="screen, mobile" title="main" charset="utf-8">
-	<script type="text/javascript" src="event.js"></script>
-	<script type="text/javascript" src="bingo.js"></script>
 </head>
 <body onload="init()">
+	<select id="chooseEvent" onchange="chooseEvent(this)">
+		<option value="none" selected="selected">Select an event...</option>
+		<option value="Anniversary">Anniversary</option>
+		<option value="Birthday">Birthday</option>
+		<option value="Christmas">Christmas</option>
+		<option value="Halloween">Halloween</option>
+		<option value="Thanksgiving">Thanksgiving</option>
+	</select>
 	<table>
 		<tr>
 			<th>B</th>
@@ -106,4 +112,6 @@
 		</tr>
 	</table>
 </body>
+<script type="text/javascript" src="event.js"></script>
+<script type="text/javascript" src="bingo.js"></script>
 </html>
