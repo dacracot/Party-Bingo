@@ -9,108 +9,112 @@
 	<link rel="stylesheet" href="bingo.css" type="text/css" media="screen, mobile" title="main" charset="utf-8">
 </head>
 <body onload="init()">
-	<select id="chooseEvent" onchange="chooseEvent(this)">
-		<option value="none" selected="selected">Select an event...</option>
-		<option value="Anniversary">Anniversary</option>
-		<option value="Birthday">Birthday</option>
-		<option value="Christmas">Christmas</option>
-		<option value="Halloween">Halloween</option>
-		<option value="Thanksgiving">Thanksgiving</option>
-	</select>
-	<table>
-		<tr>
-			<th>B</th>
-			<th>I</th>
-			<th>N</th>
-			<th>G</th>
-			<th>O</th>
-		</tr>
-		<tr>
-			<td>
-				<input class="ButtonOff" type="button" id="b1" value="B1" onclick="toggle('b1');"/>
-			</td>
-			<td>
-				<input class="ButtonOff" type="button" id="i1" value="I1" onclick="toggle('i1');"/>
-			</td>
-			<td>
-				<input class="ButtonOff" type="button" id="n1" value="N1" onclick="toggle('n1');"/>
-			</td>
-			<td>
-				<input class="ButtonOff" type="button" id="g1" value="G1" onclick="toggle('g1');"/>
-			</td>
-			<td>
-				<input class="ButtonOff" type="button" id="o1" value="O1" onclick="toggle('o1');"/>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<input class="ButtonOff" type="button" id="b2" value="B2" onclick="toggle('b2');"/>
-			</td>
-			<td>
-				<input class="ButtonOff" type="button" id="i2" value="I2" onclick="toggle('i2');"/>
-			</td>
-			<td>
-				<input class="ButtonOff" type="button" id="n2" value="N2" onclick="toggle('n2');"/>
-			</td>
-			<td>
-				<input class="ButtonOff" type="button" id="g2" value="G2" onclick="toggle('g2');"/>
-			</td>
-			<td>
-				<input class="ButtonOff" type="button" id="o2" value="O2" onclick="toggle('o2');"/>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<input class="ButtonOff" type="button" id="b3" value="B3" onclick="toggle('b3');"/>
-			</td>
-			<td>
-				<input class="ButtonOff" type="button" id="i3" value="I3" onclick="toggle('i3');"/>
-			</td>
-			<td>
-				<img id="free" src="bingox.png" width="108" height="108" alt="bingox" />
-			</td>
-			<td>
-				<input class="ButtonOff" type="button" id="g3" value="G3" onclick="toggle('g3');"/>
-			</td>
-			<td>
-				<input class="ButtonOff" type="button" id="o3" value="O3" onclick="toggle('o3');"/>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<input class="ButtonOff" type="button" id="b4" value="B4" onclick="toggle('b4');"/>
-			</td>
-			<td>
-				<input class="ButtonOff" type="button" id="i4" value="I4" onclick="toggle('i4');"/>
-			</td>
-			<td>
-				<input class="ButtonOff" type="button" id="n4" value="N4" onclick="toggle('n4');"/>
-			</td>
-			<td>
-				<input class="ButtonOff" type="button" id="g4" value="G4" onclick="toggle('g4');"/>
-			</td>
-			<td>
-				<input class="ButtonOff" type="button" id="o4" value="O4" onclick="toggle('o4');"/>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<input class="ButtonOff" type="button" id="b5" value="B5" onclick="toggle('b5');"/>
-			</td>
-			<td>
-				<input class="ButtonOff" type="button" id="i5" value="I5" onclick="toggle('i5');"/>
-			</td>
-			<td>
-				<input class="ButtonOff" type="button" id="n5" value="N5" onclick="toggle('n5');"/>
-			</td>
-			<td>
-				<input class="ButtonOff" type="button" id="g5" value="G5" onclick="toggle('g5');"/>
-			</td>
-			<td>
-				<input class="ButtonOff" type="button" id="o5" value="O5" onclick="toggle('o5');"/>
-			</td>
-		</tr>
-	</table>
+	<div id="before">
+		<select id="chooseEvent" onchange="chooseEvent(this)">
+			<option value="none" selected="selected">Select an event...</option>
+			<option value="Anniversary">Anniversary</option>
+			<option value="Birthday">Birthday</option>
+			<option value="Christmas">Christmas</option>
+			<option value="Halloween">Halloween</option>
+			<option value="Thanksgiving">Thanksgiving</option>
+		</select>
+	</div>
+	<div id="during" style="display: none">
+		<table>
+			<tr>
+				<th>B</th>
+				<th>I</th>
+				<th>N</th>
+				<th>G</th>
+				<th>O</th>
+			</tr>
+			<tr>
+				<td>
+					<input class="ButtonOff" type="button" id="b1" value="B1" onclick="toggle('b1');"/>
+				</td>
+				<td>
+					<input class="ButtonOff" type="button" id="i1" value="I1" onclick="toggle('i1');"/>
+				</td>
+				<td>
+					<input class="ButtonOff" type="button" id="n1" value="N1" onclick="toggle('n1');"/>
+				</td>
+				<td>
+					<input class="ButtonOff" type="button" id="g1" value="G1" onclick="toggle('g1');"/>
+				</td>
+				<td>
+					<input class="ButtonOff" type="button" id="o1" value="O1" onclick="toggle('o1');"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input class="ButtonOff" type="button" id="b2" value="B2" onclick="toggle('b2');"/>
+				</td>
+				<td>
+					<input class="ButtonOff" type="button" id="i2" value="I2" onclick="toggle('i2');"/>
+				</td>
+				<td>
+					<input class="ButtonOff" type="button" id="n2" value="N2" onclick="toggle('n2');"/>
+				</td>
+				<td>
+					<input class="ButtonOff" type="button" id="g2" value="G2" onclick="toggle('g2');"/>
+				</td>
+				<td>
+					<input class="ButtonOff" type="button" id="o2" value="O2" onclick="toggle('o2');"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input class="ButtonOff" type="button" id="b3" value="B3" onclick="toggle('b3');"/>
+				</td>
+				<td>
+					<input class="ButtonOff" type="button" id="i3" value="I3" onclick="toggle('i3');"/>
+				</td>
+				<td>
+					<img id="free" src="bingox.png" width="108" height="108" alt="bingox" />
+				</td>
+				<td>
+					<input class="ButtonOff" type="button" id="g3" value="G3" onclick="toggle('g3');"/>
+				</td>
+				<td>
+					<input class="ButtonOff" type="button" id="o3" value="O3" onclick="toggle('o3');"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input class="ButtonOff" type="button" id="b4" value="B4" onclick="toggle('b4');"/>
+				</td>
+				<td>
+					<input class="ButtonOff" type="button" id="i4" value="I4" onclick="toggle('i4');"/>
+				</td>
+				<td>
+					<input class="ButtonOff" type="button" id="n4" value="N4" onclick="toggle('n4');"/>
+				</td>
+				<td>
+					<input class="ButtonOff" type="button" id="g4" value="G4" onclick="toggle('g4');"/>
+				</td>
+				<td>
+					<input class="ButtonOff" type="button" id="o4" value="O4" onclick="toggle('o4');"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input class="ButtonOff" type="button" id="b5" value="B5" onclick="toggle('b5');"/>
+				</td>
+				<td>
+					<input class="ButtonOff" type="button" id="i5" value="I5" onclick="toggle('i5');"/>
+				</td>
+				<td>
+					<input class="ButtonOff" type="button" id="n5" value="N5" onclick="toggle('n5');"/>
+				</td>
+				<td>
+					<input class="ButtonOff" type="button" id="g5" value="G5" onclick="toggle('g5');"/>
+				</td>
+				<td>
+					<input class="ButtonOff" type="button" id="o5" value="O5" onclick="toggle('o5');"/>
+				</td>
+			</tr>
+		</table>
+	</div>
 </body>
 <script type="text/javascript" src="event.js"></script>
 <script type="text/javascript" src="bingo.js"></script>

@@ -37,26 +37,15 @@ notBingo = "bingox.png";
 hasBingo = "bingo.png";
 //======================================================================
 function chooseEvent(select) {
-
-console.log("-1- selected:"+select.options[select.selectedIndex].value);
-
 	if(select.options[select.selectedIndex].value == "none") {
-
-console.log("-2- selected:"+select.options[select.selectedIndex].value);
-
 		alert("Select an event from the list.");
-
-console.log("-3- selected:"+select.options[select.selectedIndex].value);
-
 		}
 	else {
 
-console.log("-4- selected:"+select.options[select.selectedIndex].value);
+console.log("selected:"+select.options[select.selectedIndex].value);
 
-		document.getElementById("chooseEvent").style.display = "none";
-
-console.log("-5- selected:"+select.options[select.selectedIndex].value);
-
+		document.getElementById("before").style.display = "none";
+		document.getElementById("during").style.display = "";
 		}
 	}
 //======================================================================
