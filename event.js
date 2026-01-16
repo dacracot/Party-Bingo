@@ -2,7 +2,7 @@
 var notBingo = "";
 var hasBingo = "";
 //======================================================================
-// common hits (8)
+// common hits
 var hits = new Array
 	(
 	"audible burp",
@@ -13,7 +13,7 @@ var hits = new Array
 	"foreign language spoken",
 	"cursing"
 	);
-// meal hits (10)
+// meal hits
 var food = new Array
 	(
 	"dog fed scraps",
@@ -27,14 +27,15 @@ var food = new Array
 	"burnt food",
 	"cold food"
 	);
-// gifting hits (3)
+// gifting hits
 var gifts = new Array
 	(
 	"regifted present",
 	"wrong wrapping paper",
+	"presents are not opened",
 	"preserve paper unwrapping"
 	);
-// guest hits (4)
+// guest hits
 var guests = new Array
 	(
 	"early guest",
@@ -52,21 +53,28 @@ function chooseEvent(select) {
 			case "Anniversary":
 				notBingo = "grfx/AnniversaryX.png";
 				hasBingo = "grfx/Anniversary.png";
-				// unique hits to Anniversary
+				// unique hits to Anniversary - 17
 				hits = hits.concat(
 					[
 					"sappy story",
+					"over 40 years",
 					"crying"
 					]).concat(gifts).concat(guests);
 				break;
 			case "Birthday":
 				notBingo = "grfx/BirthdayX.png";
 				hasBingo = "grfx/Birthday.png";
-				// unique hits to Birthday
+				// unique hits to Birthday - 24
 				hits = hits.concat(
 					[
 					"candle lit after blowing",
 					"balloon pops",
+					"party at a venue",
+					"party in a home",
+					"not actually born today",
+					"birthday cake is not a cake",
+					"help blowing out candles",
+					"no matches or lighter",
 					"age is secret"
 					]).concat(gifts).concat(guests);
 				break;
@@ -87,7 +95,7 @@ function chooseEvent(select) {
 			case "Halloween":
 				notBingo = "grfx/HalloweenX.png";
 				hasBingo = "grfx/Halloween.png";
-				// unique hits to Halloween
+				// unique hits to Halloween - 14
 				hits = hits.concat(
 					[
 					"lemon drops",
@@ -99,6 +107,11 @@ function chooseEvent(select) {
 					"no peanutbutter cups",
 					"ghost story",
 					"lost phone reception",
+					"TP'd",
+					"screams",
+					"less than 10 trick or treaters",
+					"more than 30 trick or treaters",
+					"first trick or treaters before dark",
 					"stomach ache"
 					]);
 				break;
@@ -133,6 +146,8 @@ function chooseEvent(select) {
 					[
 					"awkward grace",
 					"under cooked turkey",
+					"football on TV",
+					"ran out of something",
 					"family feud"
 					]).concat(food).concat(guests);
 				break;
