@@ -8,7 +8,6 @@ var hits = new Array
 	"audible burp",
 	"phone rings",
 	"awkward silence",
-	"visible dog poop",
 	"audible flatulence",
 	"laughter",
 	"foreign language spoken",
@@ -53,7 +52,7 @@ function chooseEvent(select) {
 			case "Anniversary":
 				notBingo = "grfx/AnniversaryX.png";
 				hasBingo = "grfx/Anniversary.png";
-				// unique hits to Anniversary (2+3+4)+8=17
+				// unique hits to Anniversary
 				hits = hits.concat(
 					[
 					"sappy story",
@@ -63,53 +62,61 @@ function chooseEvent(select) {
 			case "Birthday":
 				notBingo = "grfx/BirthdayX.png";
 				hasBingo = "grfx/Birthday.png";
-				// unique hits to Birthday (2+3+4)+8=17
+				// unique hits to Birthday
 				hits = hits.concat(
 					[
-					"candle lit after blow",
+					"candle lit after blowing",
+					"balloon pops",
 					"age is secret"
 					]).concat(gifts).concat(guests);
 				break;
 			case "Christmas":
 				notBingo = "grfx/ChristmasX.png";
 				hasBingo = "grfx/Christmas.png";
-				// unique hits to Christmas (3+10+3+4)+8=28
+				// unique hits to Christmas
 				hits = hits.concat(
 					[
 					"xmas light malfunction",
 					"unmarked gift",
+					"carols sung",
+					"batteries not included",
+					"\"Just what I always wanted.\"",
 					"gift for a pet"
 					]).concat(food).concat(gifts).concat(guests);
 				break;
 			case "Halloween":
 				notBingo = "grfx/HalloweenX.png";
 				hasBingo = "grfx/Halloween.png";
-				// unique hits to Halloween (7)+8=15
+				// unique hits to Halloween
 				hits = hits.concat(
 					[
 					"lemon drops",
 					"rasins",
 					"religious message",
+					"trick or treaters without costume",
 					"costume malfunction",
 					"full sized candy bar",
 					"no peanutbutter cups",
+					"ghost story",
+					"lost phone reception",
 					"stomach ache"
 					]);
 				break;
 			case "Superbowl":
 				notBingo = "grfx/SuperbowlX.png";
 				hasBingo = "grfx/Superbowl.png";
-				// unique hits to Superbowl (14+10+4)+8=32
+				// unique hits to Superbowl
 				hits = hits.concat(
 					[
 					"fourth down conversion",
-					"go for 2 fail",
+					"go for 2 failed",
 					"go for 2 success",
 					"military fly over",
 					"interception",
 					"roughing the passer",
 					"play over 60 yards",
 					"50+ yard field goal",
+					"blocked kick",
 					"second string QB",
 					"fight",
 					"official review",
@@ -121,10 +128,12 @@ function chooseEvent(select) {
 			case "Thanksgiving":
 				notBingo = "grfx/ThanksgivingX.png";
 				hasBingo = "grfx/Thanksgiving.png";
-				// unique hits to Thanksgiving (1+10+4)+8=23
+				// unique hits to Thanksgiving
 				hits = hits.concat(
 					[
-					"awkward grace"
+					"awkward grace",
+					"under cooked turkey",
+					"family feud"
 					]).concat(food).concat(guests);
 				break;
 			default:
