@@ -51,8 +51,8 @@ function chooseEvent(select) {
 	else {
 		switch (select.options[select.selectedIndex].value) {
 			case "Anniversary":
-				notBingo = "grfx/AnniversaryX.png";
-				hasBingo = "grfx/Anniversary.png";
+				notBingo = "grfx/AnniversaryX.svg";
+				hasBingo = "grfx/Anniversary.svg";
 				// unique hits to Anniversary - 17
 				hits = hits.concat(
 					[
@@ -62,8 +62,8 @@ function chooseEvent(select) {
 					]).concat(gifts).concat(guests);
 				break;
 			case "Birthday":
-				notBingo = "grfx/BirthdayX.png";
-				hasBingo = "grfx/Birthday.png";
+				notBingo = "grfx/BirthdayX.svg";
+				hasBingo = "grfx/Birthday.svg";
 				// unique hits to Birthday - 24
 				hits = hits.concat(
 					[
@@ -79,8 +79,8 @@ function chooseEvent(select) {
 					]).concat(gifts).concat(guests);
 				break;
 			case "Christmas":
-				notBingo = "grfx/ChristmasX.png";
-				hasBingo = "grfx/Christmas.png";
+				notBingo = "grfx/ChristmasX.svg";
+				hasBingo = "grfx/Christmas.svg";
 				// unique hits to Christmas
 				hits = hits.concat(
 					[
@@ -93,8 +93,8 @@ function chooseEvent(select) {
 					]).concat(food).concat(gifts).concat(guests);
 				break;
 			case "Halloween":
-				notBingo = "grfx/HalloweenX.png";
-				hasBingo = "grfx/Halloween.png";
+				notBingo = "grfx/HalloweenX.svg";
+				hasBingo = "grfx/Halloween.svg";
 				// unique hits to Halloween - 14
 				hits = hits.concat(
 					[
@@ -116,8 +116,8 @@ function chooseEvent(select) {
 					]);
 				break;
 			case "Superbowl":
-				notBingo = "grfx/SuperbowlX.png";
-				hasBingo = "grfx/Superbowl.png";
+				notBingo = "grfx/SuperbowlX.svg";
+				hasBingo = "grfx/Superbowl.svg";
 				// unique hits to Superbowl
 				hits = hits.concat(
 					[
@@ -139,8 +139,8 @@ function chooseEvent(select) {
 					]).concat(food).concat(guests);
 				break;
 			case "Thanksgiving":
-				notBingo = "grfx/ThanksgivingX.png";
-				hasBingo = "grfx/Thanksgiving.png";
+				notBingo = "grfx/ThanksgivingX.svg";
+				hasBingo = "grfx/Thanksgiving.svg";
 				// unique hits to Thanksgiving
 				hits = hits.concat(
 					[
