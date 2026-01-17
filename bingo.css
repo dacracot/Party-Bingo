@@ -13,6 +13,8 @@ body {
 	background-color: #CCCCCC; /*without this, safari ignores styling*/
 	font-family: Arial, Helvetica;
 	font-size: 12pt;
+	color: black;
+	font-weight: bold;
 	text-align: center;
 	white-space: normal;
 	padding: 2px;
@@ -28,6 +30,8 @@ body {
 	background-color: #ED0200; /*without this, safari ignores styling*/
 	font-family: Arial, Helvetica;
 	font-size: 12pt;
+	color: black;
+	font-weight: bold;
 	text-align: center;
 	white-space: normal;
 	padding: 2px;

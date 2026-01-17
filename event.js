@@ -10,7 +10,7 @@ var hits = new Array
 	"awkward silence",
 	"audible flatulence",
 	"laughter",
-	"non-english language spoken",
+	"foreign language spoken",
 	"cursing"
 	);
 // meal hits
