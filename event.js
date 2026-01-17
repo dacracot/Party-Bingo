@@ -45,10 +45,7 @@ var guests = new Array
 	);
 //======================================================================
 function chooseEvent(select) {
-	if(select.options[select.selectedIndex].value == "none") {
-		alert("Select an event from the list.");
-		}
-	else {
+	if(select.options[select.selectedIndex].value != "none") {
 		switch (select.options[select.selectedIndex].value) {
 			case "Anniversary":
 				notBingo = "grfx/AnniversaryX.svg";
