@@ -10,7 +10,7 @@ var hits = new Array
 	"awkward silence",
 	"audible flatulence",
 	"laughter",
-	"foreign language spoken",
+	"non-english language spoken",
 	"cursing"
 	);
 // meal hits
@@ -50,28 +50,57 @@ function chooseEvent(select) {
 			case "Anniversary":
 				notBingo = "grfx/AnniversaryX.svg";
 				hasBingo = "grfx/Anniversary.svg";
-				// unique hits to Anniversary - 17
+				// unique hits to Anniversary
 				hits = hits.concat(
 					[
+					"spouse forgot date",
+					"couple arguing",
+					"play silly game",
+					"how we met story",
+					"happy couple kiss",
 					"sappy story",
+					"over 20 years",
 					"over 40 years",
+					"renew vows",
+					"clergy attending",
 					"crying"
+					]).concat(gifts).concat(guests);
+				break;
+			case "Baby Shower":
+				notBingo = "grfx/BabyShowerX.svg";
+				hasBingo = "grfx/BabyShower.svg";
+				// unique hits to Birthday
+				hits = hits.concat(
+					[
+					"sex is unknown",
+					"sex is known",
+					"play silly game",
+					"party at a venue",
+					"party in a home",
+					"party has a theme",
+					"mother is showing",
+					"not mother\'s first",
+					"baby is attending",
+					"over 3 babies attending",
+					"grandparent attending"
 					]).concat(gifts).concat(guests);
 				break;
 			case "Birthday":
 				notBingo = "grfx/BirthdayX.svg";
 				hasBingo = "grfx/Birthday.svg";
-				// unique hits to Birthday - 24
+				// unique hits to Birthday
 				hits = hits.concat(
 					[
+					"writing on cake",
 					"candle lit after blowing",
 					"balloon pops",
 					"party at a venue",
 					"party in a home",
 					"not actually born today",
+					"Happy Birthday sung",
 					"birthday cake is not a cake",
 					"help blowing out candles",
-					"no matches or lighter",
+					"can\'t find matches or lighter",
 					"age is secret"
 					]).concat(gifts).concat(guests);
 				break;
@@ -92,18 +121,23 @@ function chooseEvent(select) {
 			case "Halloween":
 				notBingo = "grfx/HalloweenX.svg";
 				hasBingo = "grfx/Halloween.svg";
-				// unique hits to Halloween - 14
+				// unique hits to Halloween
 				hits = hits.concat(
 					[
+					"bought too much candy",
+					"run out of candy",
+					"spilled candy bowl",
+					"candy into pillow case",
 					"lemon drops",
 					"rasins",
 					"religious message",
 					"trick or treaters without costume",
+					"popcorn ball",
 					"costume malfunction",
 					"full sized candy bar",
 					"no peanutbutter cups",
 					"ghost story",
-					"lost phone reception",
+					"adult trick or treaters",
 					"TP'd",
 					"screams",
 					"less than 10 trick or treaters",

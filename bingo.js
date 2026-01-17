@@ -28,16 +28,6 @@ function draw()
 	document.getElementById("free").src = notBingo;
 	document.getElementById("before").style.display = "none";
 	document.getElementById("during").style.display = "";
-
-// -----------------------------------
-// debug list lengths
-console.log("num of hits: "+hits.length);
-var matched = document.querySelectorAll("input[value='undefined']");
-matched.forEach((x) => {
-  x.className = "ButtonOn";
-});
-// -----------------------------------
-	
 	}
 //======================================================================
 function toggle(b)
